@@ -199,8 +199,7 @@ void do_exit_command()
 	args[n_args + 1] = NULL;
 
 	if (opt_exit_delay) {
-		ndebugf("Sleeping for %d seconds before executing exit command", opt_exit_delay);
-		sleep(opt_exit_delay);
+		return;
 	}
 
 	execv(opt_exit_command, args);
